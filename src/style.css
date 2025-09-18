@@ -8,11 +8,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
   min-height: 100vh;
+  min-width: 50%;
   margin: 0;
   padding: 20px;
+  text-transform:capitalize;
   background: linear-gradient(to bottom, #005586 0%, #018eaa 100%);
+  color:white;
 }
 h1{
   margin: 0;
@@ -47,7 +49,7 @@ h1{
   border: none;
   font-size: 1rem;
   height: 40px;
-  width: 800px;
+  width: 700px;
 }
 #search-btn {
   padding: 10px 20px;
@@ -69,6 +71,89 @@ h1{
 }
 .main {
   display: flex;
+  color: white;
   flex-direction: column;
+  width: 85%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 50px;
+  margin: 0px;
+}
+.date{
+  font-size: 1.2rem;
+  
+  
+}
+.datep{
+  margin: 0;
+}
+.locaitiontemp{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.locaitioninfo{
+  padding: 50px;
+  padding-left: 0px;
+}
+.tempinfo{
+  padding: 50px;
+  
+}
+  
+
+.city{
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 5px;
+  text-transform:capitalize;
+}
+.sun{
+  display: flex;
   gap: 20px;
+  font-size: 1rem;
+}
+.temperaturenum{
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+}
+.feelslike, .country{
+  font-size: 1.2rem;
+  margin: 0;
+  margin-top: 5px;
+}
+.condition{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.more-info{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+.humidity, .wind{
+  margin: 0;
+  font-weight: bold;
+  background-color: #005586;
+  padding: 50px;
+  border-radius: 20px;
+}
+.middlehours{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  width: 85%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 50px;
+  
+}
+.breakh2{
+
 }
