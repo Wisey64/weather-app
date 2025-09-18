@@ -8,4 +8,6 @@ searchBtn.addEventListener("click", () => {
     
     
 });
-function updateWeather(data) {}
+function updateWeather(data) {
+
+}
