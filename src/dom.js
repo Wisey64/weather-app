@@ -1,6 +1,17 @@
 import { fetchWeather } from "./api";
-import rainyDayIcon from './assets/rainy-day.png';
-import cloudyDayIcon from './assets/clouds.png';
+import rainIcon from './assets/rain.svg';
+import cloudyDayIcon from './assets/cloudy.svg';
+import cleardayIcon from './assets/clear-day.svg';
+import fogIcon from './assets/fog.svg';
+import hailIcon from './assets/hail.svg';
+import partlyCloudyDayIcon from './assets/partly-cloudy-day.svg';
+import rainsnowIcon from './assets/rain-snow.svg';
+import showersIcon from './assets/showers-day.svg';
+import sleeticon from './assets/sleet.svg';
+import snowIcon from './assets/snow.svg';
+import thunderrainIcon from './assets/thunder-rain.svg';
+import thundericon from './assets/thunder.svg';
+import windIcon from './assets/wind.svg';
 
 const cityInput = document.getElementById('city-input');
 const searchBtn = document.getElementById('search-btn');
@@ -47,10 +58,36 @@ function updateWeather(data) {
     //check the the condition to set the icon
     function getIcon() {
         if (data.days[0].icon === "rain") {
-            icon.src = rainyDayIcon;
+            icon.src = rainIcon;
         } else if (data.days[0].icon === "partly-cloudy-day") {
+            icon.src = partlyCloudyDayIcon;
+        } else if (data.days[0].icon === "clear-day") {
+            icon.src = cleardayIcon;
+        } else if (data.days[0].icon === "fog") {
+            icon.src = fogIcon;
+        } else if (data.days[0].icon === "hail") {
+            icon.src = hailIcon;
+        } else if (data.days[0].icon === "rain-snow") {
+            icon.src = rainsnowIcon;
+        } else if (data.days[0].icon === "showers-day") {
+            icon.src = showersIcon;
+        } else if (data.days[0].icon === "sleet") {
+            icon.src = sleeticon;
+        } else if (data.days[0].icon === "snow") {
+            icon.src = snowIcon;
+        } else if (data.days[0].icon === "thunder-rain") {
+            icon.src = thunderrainIcon;
+        } else if (data.days[0].icon === "thunder") {
+            icon.src = thundericon;
+        } else if (data.days[0].icon === "wind") {
+            icon.src = windIcon;
+        } else if (data.days[0].icon === "cloudy") {
             icon.src = cloudyDayIcon;
+        } else {
+            icon.src = cleardayIcon; //default icon
         }
+         
+         
     }
     getIcon()
 }
