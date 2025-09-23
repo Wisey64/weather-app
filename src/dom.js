@@ -1,4 +1,7 @@
 import { fetchWeather } from "./api";
+import rainyDayIcon from './assets/rainy-day.png';
+import cloudyDayIcon from './assets/clouds.png';
+
 const cityInput = document.getElementById('city-input');
 const searchBtn = document.getElementById('search-btn');
 let weatherdata;
@@ -39,10 +42,15 @@ function updateWeather(data) {
     feelslike.textContent = `Feels like: ${data.days[0].feelslike}°C`;
     condition.textContent = data.days[0].conditions;
     humidity.textContent = `Humidity: ${data.days[0].humidity}%`;
-    icon.src = `https://cdn.weatherapi.com/weather/64x64/day/${data.days[0].icon}.png`;
     wind.textContent = `Wind: ${data.days[0].windspeed} km/h`;
     visibility.textContent = `Visibility: ${data.days[0].visibility} km`;
-    
-
-
+    //check the the condition to set the icon
+    function getIcon() {
+        if (data.days[0].icon === "rain") {
+            icon.src = rainyDayIcon;
+        } else if (data.days[0].icon === "partly-cloudy-day") {
+            icon.src = cloudyDayIcon;
+        }
+    }
+    getIcon()
 }

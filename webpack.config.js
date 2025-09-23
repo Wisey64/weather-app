@@ -20,6 +20,10 @@ module.exports = {
         test: /\.css$/, // Add this rule for CSS files
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   devServer: {
