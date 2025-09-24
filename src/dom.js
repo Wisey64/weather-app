@@ -14,7 +14,11 @@ import thundericon from './assets/thunder.svg';
 import windIcon from './assets/wind.svg';
 import clearnightIcon from './assets/clear-night.svg';
 import partlyCloudyNightIcon from './assets/partly-cloudy-night.svg';
-
+import sunriseiconsvg from './assets/sunrise.svg';
+import sunseticonsvg from './assets/sunset.svg';
+import humidityiconsvg from './assets/humidity.svg';
+import windiconsvg from './assets/cooling.svg';
+import thermometericonsvg from './assets/thermometer.svg';
 
 const cityInput = document.getElementById('city-input');
 const searchBtn = document.getElementById('search-btn');
@@ -50,14 +54,10 @@ function updateWeather(data) {
     date.textContent = data.days[0].datetime;
     //the api does not provide country data, left blank for now
     //country.textContent = data.country;
-    const sunriseicon = document.createElement('img');
-    
-    //sunriseicon.classList.add('sunriseicon');
-    //const sun = document.querySelector('.sun');
-    //sun.prepend(sunriseicon);
-    //sunriseicon.src = sunrise;
 
-    sunset.textContent = `Sunset: ${data.days[0].sunset}`;
+    
+    sunrise.textContent = data.days[0].sunrise;
+    sunset.textContent = data.days[0].sunset;
     temp.textContent = `${data.days[0].temp}°`;
     feelslike.textContent = `Feels like: ${data.days[0].feelslike}°C`;
     condition.textContent = data.days[0].conditions;

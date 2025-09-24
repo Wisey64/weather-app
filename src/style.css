@@ -111,8 +111,10 @@ h1{
 }
 .sun{
   display: flex;
-  gap: 20px;
+  gap: 10px;
   font-size: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 .tempnum{
   font-size: 4rem;
@@ -137,15 +139,7 @@ h1{
   margin-top: 20px;
   
 }
-.humidity, .wind, .visibility{
-  margin: 0;
-  text-align: center;
-  font-weight: bold;
-  background-color: #005586;
-  padding: 50px;
-  border-radius: 20px;
-  width: 121px ;
-}
+
 .middlehours , .days{
   display: flex;
   flex-direction: column;
@@ -198,4 +192,34 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.sunriseiconsvg, .sunseticonsvg{
+  width: 40px;
+  height: 40px;
+}
+.moreinfoicon{
+  width: 40px;
+  height: 40px;
+}
+.moreinfocards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #005586;
+  padding: 50px;
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+  
+  text-align: center;
+  justify-content: center;
+}
+.humidity, .wind, .visibility{
+  margin: 0px;
+  padding: 10px;
+}
+.moreinfoicon{
+  width: 40px;
+  height: 40px;
 }
