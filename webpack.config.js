@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development', // Set to 'development' or 'production'
+  mode: 'development', 
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -13,11 +13,11 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader', // Use Babel to transpile modern JavaScript
+          loader: 'babel-loader', 
         },
       },
       {
-        test: /\.css$/, // Add this rule for CSS files
+        test: /\.css$/, 
         use: ['style-loader', 'css-loader'],
       },
       {

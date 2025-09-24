@@ -16,7 +16,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `body {\n  font-family: Arial, sans-serif;\n}\n.main {\n  text-align: center;\n  margin-top: 50px;\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://weather-app/./src/style.css?./node_modules/css-loader/dist/cjs.js\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `html{\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\nbody {\n  font-family: Arial, sans-serif;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  min-height: 100vh;\n  min-width: 50%;\n  margin: 0;\n  padding: 20px;\n  text-transform:capitalize;\n  background: linear-gradient(to bottom, #005586 0%, #018eaa 100%);\n  color:white;\n}\nh1{\n  margin: 0;\n}\n.navbar {\n  width: 100%;\n  display: flex;\n  gap: 20px;\n  justify-content: space-between;\n  align-items: center;\n  color: white;\n  padding: 10px;\n}\n.headcontainer {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  font-size: 0.8rem;\n  font-weight: bold;\n  padding: 15px;\n  background-color: #001a52;\n  border-radius: 50px;\n}\n.search{\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n#city-input {\n  padding: 15px;\n  border-radius: 20px;\n  border: none;\n  font-size: 1rem;\n  height: 40px;\n  width: 700px;\n}\n#search-btn {\n  padding: 10px 20px;\n  border-radius: 20px;\n  border: none;\n  background-color: #001a52;\n  color: white;\n  font-size: 1rem;\n  cursor: pointer;\n}\n.unit{\n  padding: 10px 20px;\n  border-radius: 20px;\n  border: none;\n  background-color: #001a52;\n  color: white;\n  font-size: 1rem;\n  cursor: pointer;\n}\n.main {\n  display: flex;\n  color: white;\n  flex-direction: column;\n  width: 85%;\n  background-color: rgba(255, 255, 255, 0.2);\n  border-radius: 20px;\n  padding: 50px;\n  margin: 0px;\n}\n.date{\n  font-size: 1.2rem;\n  \n  \n}\n.datep{\n  margin: 0;\n}\n.locaitiontemp{\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.locaitioninfo{\n  padding: 50px;\n  padding-left: 0px;\n}\n.tempinfo{\n  padding: 50px;\n  \n}\n  \n\n.city{\n  font-size: 3.5rem;\n  font-weight: bold;\n  margin: 0;\n  margin-top: 5px;\n  text-transform:capitalize;\n}\n.sun{\n  display: flex;\n  gap: 20px;\n  font-size: 1rem;\n}\n.tempnum{\n  font-size: 4rem;\n  font-weight: bold;\n  margin: 0;\n}\n.feelslike, .country{\n  font-size: 1.2rem;\n  margin: 0;\n  margin-top: 5px;\n}\n.condition{\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 10px;\n}\n.more-info{\n  display: flex;\n  justify-content: space-between;\n  font-size: 1.2rem;\n  margin-top: 20px;\n  \n}\n.humidity, .wind, .visibility{\n  margin: 0;\n  text-align: center;\n  font-weight: bold;\n  background-color: #005586;\n  padding: 50px;\n  border-radius: 20px;\n  width: 121px ;\n}\n.middlehours , .days{\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: white;\n  width: 85%;\n  background-color: rgba(255, 255, 255, 0.2);\n  border-radius: 20px;\n  padding: 50px;\n  \n}\n.breakh22{\n  display: flex;\n  justify-content: left;\n  width: 92%;\n\n}\n.icon{\n  width: 100px;\n  height: 100px;\n}\n.middlehours{\n  display: flex ;\n  flex-direction: row;\n  gap: 20px;\n  \n}\n.hour{\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  \n  font-size: 1.2rem;\n  background-color: #005586;\n  padding: 20px;\n  border-radius: 20px;\n  width: 100px;\n  height: 400px;\n  justify-content: space-evenly;\n  text-align: center;\n}\n.houricon{\n  width: 100px;\n  height: 80px;\n}\n.timep, .conditionp, .temphour, .windhour{\n  width: 100px;\n  height: 40px;\n  margin: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://weather-app/./src/style.css?./node_modules/css-loader/dist/cjs.js\n}");
 
 /***/ }),
 
@@ -106,7 +106,207 @@ eval("{\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleEle
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   fetchWeather: () => (/* binding */ fetchWeather)\n/* harmony export */ });\nfunction fetchWeather(city) {\n  var key = \"JQKYJVRRDN6HH3YN3PGCW2USZ\";\n  var cityName = city;\n  var data = fetch(\"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/\".concat(cityName, \"/?key=\").concat(key));\n  data.then(function (response) {\n    if (!response.ok) {\n      throw new Error(\"HTTP error! Status: \".concat(response.status));\n    }\n    return response.json();\n  }).then(function (result) {\n    console.log(result);\n    return result;\n  })[\"catch\"](function (error) {\n    return console.error('Error fetching weather data:', error);\n  });\n}\n\n//# sourceURL=webpack://weather-app/./src/api.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   fetchWeather: () => (/* binding */ fetchWeather)\n/* harmony export */ });\nfunction fetchWeather(city) {\n  var key = \"JQKYJVRRDN6HH3YN3PGCW2USZ\";\n  var cityName = city;\n  return fetch(\"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/\".concat(cityName, \"/?key=\").concat(key)).then(function (response) {\n    if (!response.ok) {\n      throw new Error(\"HTTP error! Status: \".concat(response.status));\n    }\n    return response.json();\n  });\n}\n\n//# sourceURL=webpack://weather-app/./src/api.js?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/clear-day.svg":
+/*!**********************************!*\
+  !*** ./src/assets/clear-day.svg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"e6541ce84a82ea86deaf.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/clear-day.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/clear-night.svg":
+/*!************************************!*\
+  !*** ./src/assets/clear-night.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"7228ebde1a1cbbabeed4.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/clear-night.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/cloudy.svg":
+/*!*******************************!*\
+  !*** ./src/assets/cloudy.svg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"bd65452b254265c4f761.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/cloudy.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/cooling.svg":
+/*!********************************!*\
+  !*** ./src/assets/cooling.svg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"b9b90e7c76a2dc3de04f.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/cooling.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/fog.svg":
+/*!****************************!*\
+  !*** ./src/assets/fog.svg ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"07bf93f0c95051aa29f1.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/fog.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/hail.svg":
+/*!*****************************!*\
+  !*** ./src/assets/hail.svg ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"7716b874413ac673e7aa.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/hail.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/humidity.svg":
+/*!*********************************!*\
+  !*** ./src/assets/humidity.svg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"7de671f133bbd62518da.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/humidity.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/partly-cloudy-day.svg":
+/*!******************************************!*\
+  !*** ./src/assets/partly-cloudy-day.svg ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"749d1251900ec2449417.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/partly-cloudy-day.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/partly-cloudy-night.svg":
+/*!********************************************!*\
+  !*** ./src/assets/partly-cloudy-night.svg ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"c0a8d00378e555b86fcf.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/partly-cloudy-night.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/rain-snow.svg":
+/*!**********************************!*\
+  !*** ./src/assets/rain-snow.svg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"30d0498eaffed5814744.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/rain-snow.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/rain.svg":
+/*!*****************************!*\
+  !*** ./src/assets/rain.svg ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"848651d20f3f58949d26.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/rain.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/showers-day.svg":
+/*!************************************!*\
+  !*** ./src/assets/showers-day.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"99f737e43d74ac67225a.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/showers-day.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/sleet.svg":
+/*!******************************!*\
+  !*** ./src/assets/sleet.svg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"a791cdeb76b2a1c641a5.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/sleet.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/snow.svg":
+/*!*****************************!*\
+  !*** ./src/assets/snow.svg ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"f8d40353e151c5c7cce0.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/snow.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/sunrise.svg":
+/*!********************************!*\
+  !*** ./src/assets/sunrise.svg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"3800c09d582ec6283466.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/sunrise.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/sunset.svg":
+/*!*******************************!*\
+  !*** ./src/assets/sunset.svg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"a9ec5d30476578148aed.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/sunset.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/thermometer.svg":
+/*!************************************!*\
+  !*** ./src/assets/thermometer.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"5d07f4dbccf86ad1a151.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/thermometer.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/thunder-rain.svg":
+/*!*************************************!*\
+  !*** ./src/assets/thunder-rain.svg ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"80f57ee23a7a1d38351e.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/thunder-rain.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/thunder.svg":
+/*!********************************!*\
+  !*** ./src/assets/thunder.svg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"31fc29a57119a2bd369f.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/thunder.svg?\n}");
+
+/***/ }),
+
+/***/ "./src/assets/wind.svg":
+/*!*****************************!*\
+  !*** ./src/assets/wind.svg ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("{module.exports = __webpack_require__.p + \"e87b86c9cbeabdd90ce2.svg\";\n\n//# sourceURL=webpack://weather-app/./src/assets/wind.svg?\n}");
 
 /***/ }),
 
@@ -116,7 +316,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api */ \"./src/api.js\");\n\nvar cityInput = document.getElementById('city-input');\nvar searchBtn = document.getElementById('search-btn');\nsearchBtn.addEventListener(\"click\", function () {\n  var cityy = cityInput.value;\n  (0,_api__WEBPACK_IMPORTED_MODULE_0__.fetchWeather)(cityy);\n  console.log(cityy);\n});\nconsole.log(\"Hello world\");\n\n//# sourceURL=webpack://weather-app/./src/dom.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api */ \"./src/api.js\");\n/* harmony import */ var _assets_rain_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/rain.svg */ \"./src/assets/rain.svg\");\n/* harmony import */ var _assets_cloudy_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/cloudy.svg */ \"./src/assets/cloudy.svg\");\n/* harmony import */ var _assets_clear_day_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/clear-day.svg */ \"./src/assets/clear-day.svg\");\n/* harmony import */ var _assets_fog_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/fog.svg */ \"./src/assets/fog.svg\");\n/* harmony import */ var _assets_hail_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/hail.svg */ \"./src/assets/hail.svg\");\n/* harmony import */ var _assets_partly_cloudy_day_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/partly-cloudy-day.svg */ \"./src/assets/partly-cloudy-day.svg\");\n/* harmony import */ var _assets_rain_snow_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/rain-snow.svg */ \"./src/assets/rain-snow.svg\");\n/* harmony import */ var _assets_showers_day_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/showers-day.svg */ \"./src/assets/showers-day.svg\");\n/* harmony import */ var _assets_sleet_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/sleet.svg */ \"./src/assets/sleet.svg\");\n/* harmony import */ var _assets_snow_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/snow.svg */ \"./src/assets/snow.svg\");\n/* harmony import */ var _assets_thunder_rain_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./assets/thunder-rain.svg */ \"./src/assets/thunder-rain.svg\");\n/* harmony import */ var _assets_thunder_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./assets/thunder.svg */ \"./src/assets/thunder.svg\");\n/* harmony import */ var _assets_wind_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./assets/wind.svg */ \"./src/assets/wind.svg\");\n/* harmony import */ var _assets_clear_night_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./assets/clear-night.svg */ \"./src/assets/clear-night.svg\");\n/* harmony import */ var _assets_partly_cloudy_night_svg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./assets/partly-cloudy-night.svg */ \"./src/assets/partly-cloudy-night.svg\");\n/* harmony import */ var _assets_sunrise_svg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./assets/sunrise.svg */ \"./src/assets/sunrise.svg\");\n/* harmony import */ var _assets_sunset_svg__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./assets/sunset.svg */ \"./src/assets/sunset.svg\");\n/* harmony import */ var _assets_humidity_svg__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./assets/humidity.svg */ \"./src/assets/humidity.svg\");\n/* harmony import */ var _assets_cooling_svg__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./assets/cooling.svg */ \"./src/assets/cooling.svg\");\n/* harmony import */ var _assets_thermometer_svg__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./assets/thermometer.svg */ \"./src/assets/thermometer.svg\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar cityInput = document.getElementById('city-input');\nvar searchBtn = document.getElementById('search-btn');\nvar weatherdata;\nsearchBtn.addEventListener(\"click\", function () {\n  var userinput = cityInput.value;\n  (0,_api__WEBPACK_IMPORTED_MODULE_0__.fetchWeather)(userinput).then(function (data) {\n    weatherdata = data;\n    console.log(weatherdata);\n    updateWeather(weatherdata);\n  })[\"catch\"](function (error) {\n    return console.error('Error fetching weather data:', error);\n  });\n});\nfunction updateWeather(data) {\n  var cityh2 = document.querySelector('.city');\n  var date = document.querySelector('.datep');\n  var country = document.querySelector('.country');\n  var sunrise = document.querySelector('.sunrise');\n  var sunset = document.querySelector('.sunset');\n  var temp = document.querySelector('.tempnum');\n  var feelslike = document.querySelector('.feelslike');\n  var condition = document.querySelector('.conditiontext');\n  var humidity = document.querySelector('.humidity');\n  var icon = document.querySelector('.icon');\n  var wind = document.querySelector('.wind');\n  var visibility = document.querySelector('.visibility');\n  cityh2.textContent = data.address;\n  //maybe change the date to a more readable format\n  date.textContent = data.days[0].datetime;\n  //the api does not provide country data, left blank for now\n  //country.textContent = data.country;\n  var sunriseicon = document.createElement('img');\n  sunriseicon.src = _assets_snow_svg__WEBPACK_IMPORTED_MODULE_10__;\n  sunriseicon.classList.add('sunriseicon');\n  var sun = document.querySelector('.sun');\n  sun.prepend(sunriseicon);\n  sunset.textContent = \"Sunset: \".concat(data.days[0].sunset);\n  temp.textContent = \"\".concat(data.days[0].temp, \"\\xB0\");\n  feelslike.textContent = \"Feels like: \".concat(data.days[0].feelslike, \"\\xB0C\");\n  condition.textContent = data.days[0].conditions;\n  humidity.textContent = \"Humidity: \".concat(data.days[0].humidity, \"%\");\n  wind.textContent = \"Wind: \".concat(data.days[0].windspeed, \" km/h\");\n  visibility.textContent = \"Visibility: \".concat(data.days[0].visibility, \" km\");\n\n  //an object to map the icon strings to the imported svg files\n  var iconMap = {\n    \"rain\": _assets_rain_svg__WEBPACK_IMPORTED_MODULE_1__,\n    \"partly-cloudy-day\": _assets_partly_cloudy_day_svg__WEBPACK_IMPORTED_MODULE_6__,\n    \"clear-day\": _assets_clear_day_svg__WEBPACK_IMPORTED_MODULE_3__,\n    \"fog\": _assets_fog_svg__WEBPACK_IMPORTED_MODULE_4__,\n    \"hail\": _assets_hail_svg__WEBPACK_IMPORTED_MODULE_5__,\n    \"rain-snow\": _assets_rain_snow_svg__WEBPACK_IMPORTED_MODULE_7__,\n    \"showers-day\": _assets_showers_day_svg__WEBPACK_IMPORTED_MODULE_8__,\n    \"sleet\": _assets_sleet_svg__WEBPACK_IMPORTED_MODULE_9__,\n    \"snow\": _assets_snow_svg__WEBPACK_IMPORTED_MODULE_10__,\n    \"thunder-rain\": _assets_thunder_rain_svg__WEBPACK_IMPORTED_MODULE_11__,\n    \"thunder\": _assets_thunder_svg__WEBPACK_IMPORTED_MODULE_12__,\n    \"wind\": _assets_wind_svg__WEBPACK_IMPORTED_MODULE_13__,\n    \"cloudy\": _assets_cloudy_svg__WEBPACK_IMPORTED_MODULE_2__,\n    \"clear-night\": _assets_clear_night_svg__WEBPACK_IMPORTED_MODULE_14__,\n    \"partly-cloudy-night\": _assets_partly_cloudy_night_svg__WEBPACK_IMPORTED_MODULE_15__\n  };\n\n  //function to set the icon based on the icon string from the api\n  function getIcon(element) {\n    var iconKey = data.days[0].icon;\n    element.src = iconMap[iconKey];\n  }\n  getIcon(icon);\n  //filter the hourly data to get only the next 6 hours\n  function filterHourlyData(hourlyData) {\n    // Get the current hour\n    var currentTime = new Date();\n    var currentHour = currentTime.getHours();\n    return hourlyData.filter(function (hour) {\n      var hourTime = parseInt(hour.datetime.split(':')[0]); // Extract hour from API data\n      return hourTime >= currentHour && hourTime < currentHour + 6;\n    });\n  }\n  function updateHourly(data) {\n    var hoursContainer = document.querySelector('.middlehours');\n    hoursContainer.innerHTML = '';\n    var hourData = filterHourlyData(data.days[0].hours);\n    console.log(hourData);\n    hourData.forEach(function (hour) {\n      var hourDiv = document.createElement('div');\n      hourDiv.classList.add('hour');\n      hoursContainer.appendChild(hourDiv);\n      var timeP = document.createElement('p');\n      timeP.classList.add('timep');\n      timeP.textContent = hour.datetime;\n      hourDiv.appendChild(timeP);\n      var iconImg = document.createElement('img');\n      iconImg.classList.add('houricon');\n      hourDiv.appendChild(iconImg);\n      function gethourIcon(element) {\n        var houriconKey = hour.icon;\n        element.src = iconMap[houriconKey];\n      }\n      gethourIcon(iconImg);\n      var conditionP = document.createElement('p');\n      conditionP.classList.add('conditionp');\n      conditionP.textContent = hour.conditions;\n      hourDiv.appendChild(conditionP);\n      var tempP = document.createElement('p');\n      tempP.classList.add('temphour');\n      tempP.textContent = \"\".concat(hour.temp, \"\\xB0\");\n      hourDiv.appendChild(tempP);\n      var windP = document.createElement('p');\n      windP.classList.add('windhour');\n      windP.textContent = \"Wind: \".concat(hour.windspeed, \" km/h\");\n      hourDiv.appendChild(windP);\n    });\n  }\n  updateHourly(data);\n}\n\n//# sourceURL=webpack://weather-app/./src/dom.js?\n}");
 
 /***/ }),
 
@@ -191,6 +391,18 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -205,6 +417,29 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/^blob:/, "").replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

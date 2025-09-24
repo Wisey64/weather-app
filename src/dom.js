@@ -12,6 +12,9 @@ import snowIcon from './assets/snow.svg';
 import thunderrainIcon from './assets/thunder-rain.svg';
 import thundericon from './assets/thunder.svg';
 import windIcon from './assets/wind.svg';
+import clearnightIcon from './assets/clear-night.svg';
+import partlyCloudyNightIcon from './assets/partly-cloudy-night.svg';
+
 
 const cityInput = document.getElementById('city-input');
 const searchBtn = document.getElementById('search-btn');
@@ -19,14 +22,14 @@ let weatherdata;
 searchBtn.addEventListener("click", () => {
     const userinput = cityInput.value;
     fetchWeather(userinput)
-    .then(data => {
-        weatherdata = data;
-        console.log(weatherdata);
-        updateWeather(weatherdata);
-})
-    .catch(error => console.error('Error fetching weather data:', error));
-    
-    
+        .then(data => {
+            weatherdata = data;
+            console.log(weatherdata);
+            updateWeather(weatherdata);
+        })
+        .catch(error => console.error('Error fetching weather data:', error));
+
+
 });
 function updateWeather(data) {
     const cityh2 = document.querySelector('.city');
@@ -47,47 +50,97 @@ function updateWeather(data) {
     date.textContent = data.days[0].datetime;
     //the api does not provide country data, left blank for now
     //country.textContent = data.country;
-    sunrise.textContent = `Sunrise: ${data.days[0].sunrise}`;
+    const sunriseicon = document.createElement('img');
+    
+    //sunriseicon.classList.add('sunriseicon');
+    //const sun = document.querySelector('.sun');
+    //sun.prepend(sunriseicon);
+    //sunriseicon.src = sunrise;
+
     sunset.textContent = `Sunset: ${data.days[0].sunset}`;
-    temp.textContent = `${data.days[0].temp}°C`;
+    temp.textContent = `${data.days[0].temp}°`;
     feelslike.textContent = `Feels like: ${data.days[0].feelslike}°C`;
     condition.textContent = data.days[0].conditions;
     humidity.textContent = `Humidity: ${data.days[0].humidity}%`;
     wind.textContent = `Wind: ${data.days[0].windspeed} km/h`;
     visibility.textContent = `Visibility: ${data.days[0].visibility} km`;
-    //check the the condition to set the icon
-    function getIcon() {
-        if (data.days[0].icon === "rain") {
-            icon.src = rainIcon;
-        } else if (data.days[0].icon === "partly-cloudy-day") {
-            icon.src = partlyCloudyDayIcon;
-        } else if (data.days[0].icon === "clear-day") {
-            icon.src = cleardayIcon;
-        } else if (data.days[0].icon === "fog") {
-            icon.src = fogIcon;
-        } else if (data.days[0].icon === "hail") {
-            icon.src = hailIcon;
-        } else if (data.days[0].icon === "rain-snow") {
-            icon.src = rainsnowIcon;
-        } else if (data.days[0].icon === "showers-day") {
-            icon.src = showersIcon;
-        } else if (data.days[0].icon === "sleet") {
-            icon.src = sleeticon;
-        } else if (data.days[0].icon === "snow") {
-            icon.src = snowIcon;
-        } else if (data.days[0].icon === "thunder-rain") {
-            icon.src = thunderrainIcon;
-        } else if (data.days[0].icon === "thunder") {
-            icon.src = thundericon;
-        } else if (data.days[0].icon === "wind") {
-            icon.src = windIcon;
-        } else if (data.days[0].icon === "cloudy") {
-            icon.src = cloudyDayIcon;
-        } else {
-            icon.src = cleardayIcon; //default icon
-        }
-         
-         
+
+    //an object to map the icon strings to the imported svg files
+    const iconMap = {
+        "rain": rainIcon,
+        "partly-cloudy-day": partlyCloudyDayIcon,
+        "clear-day": cleardayIcon,
+        "fog": fogIcon,
+        "hail": hailIcon,
+        "rain-snow": rainsnowIcon,
+        "showers-day": showersIcon,
+        "sleet": sleeticon,
+        "snow": snowIcon,
+        "thunder-rain": thunderrainIcon,
+        "thunder": thundericon,
+        "wind": windIcon,
+        "cloudy": cloudyDayIcon
+        ,"clear-night": clearnightIcon
+        ,"partly-cloudy-night": partlyCloudyNightIcon
+      };
+
+    //function to set the icon based on the icon string from the api
+    function getIcon(element) {
+          const iconKey = data.days[0].icon;      
+          element.src = iconMap[iconKey]
     }
-    getIcon()
+    getIcon(icon);
+    //filter the hourly data to get only the next 6 hours
+    function filterHourlyData(hourlyData) {
+        // Get the current hour
+        const currentTime = new Date();
+        const currentHour = currentTime.getHours();
+
+        
+        return hourlyData.filter(hour => {
+            const hourTime = parseInt(hour.datetime.split(':')[0]); // Extract hour from API data
+            return hourTime >= currentHour && hourTime < currentHour + 6;
+        });
+    }
+    function updateHourly(data) {
+        const hoursContainer = document.querySelector('.middlehours');
+        hoursContainer.innerHTML = '';
+
+        const hourData = filterHourlyData(data.days[0].hours);
+        console.log(hourData);
+
+        hourData.forEach(hour => {
+            const hourDiv = document.createElement('div');
+            hourDiv.classList.add('hour');
+            hoursContainer.appendChild(hourDiv);
+
+            const timeP = document.createElement('p');
+            timeP.classList.add('timep');
+            timeP.textContent = hour.datetime;
+            hourDiv.appendChild(timeP);
+            const iconImg = document.createElement('img');
+            iconImg.classList.add('houricon');
+            hourDiv.appendChild(iconImg);
+            function gethourIcon(element) {
+          const houriconKey = hour.icon
+          element.src = iconMap[houriconKey]  
+    }
+            gethourIcon(iconImg);
+            const conditionP = document.createElement('p');
+            conditionP.classList.add('conditionp');
+            conditionP.textContent = hour.conditions;
+            hourDiv.appendChild(conditionP);
+            const tempP = document.createElement('p');
+            tempP.classList.add('temphour');
+            tempP.textContent = `${hour.temp}°`;
+            hourDiv.appendChild(tempP);
+            const windP = document.createElement('p');
+            windP.classList.add('windhour');
+            windP.textContent = `Wind: ${hour.windspeed} km/h`;
+            hourDiv.appendChild(windP);
+
+            
+        });
+    }
+    updateHourly(data);
 }
