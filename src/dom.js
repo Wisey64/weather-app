@@ -19,10 +19,25 @@ import sunseticonsvg from './assets/sunset.svg';
 import humidityiconsvg from './assets/humidity.svg';
 import windiconsvg from './assets/cooling.svg';
 import thermometericonsvg from './assets/thermometer.svg';
-
+//global variables for DOM elements
 const cityInput = document.getElementById('city-input');
 const searchBtn = document.getElementById('search-btn');
+const cityh2 = document.querySelector('.city');
+const date = document.querySelector('.datep');
+const country = document.querySelector('.country');
+const sunrise = document.querySelector('.sunrise');
+const sunset = document.querySelector('.sunset');
+const temp = document.querySelector('.tempnum');
+const feelslike = document.querySelector('.feelslike');
+const condition = document.querySelector('.conditiontext');
+const humidity = document.querySelector('.humidity');
+const icon = document.querySelector('.icon');
+const wind = document.querySelector('.wind');
+const visibility = document.querySelector('.visibility');
+const unitbtn = document.querySelector('.unit');
+
 let weatherdata;
+//event listener for the search button to fetch weather data and update the DOM
 searchBtn.addEventListener("click", () => {
     const userinput = cityInput.value;
     fetchWeather(userinput)
@@ -35,31 +50,19 @@ searchBtn.addEventListener("click", () => {
 
 
 });
+//function to update the DOM with fetched weather data
 function updateWeather(data) {
-    const cityh2 = document.querySelector('.city');
-    const date = document.querySelector('.datep');
-    const country = document.querySelector('.country');
-    const sunrise = document.querySelector('.sunrise');
-    const sunset = document.querySelector('.sunset');
-    const temp = document.querySelector('.tempnum');
-    const feelslike = document.querySelector('.feelslike');
-    const condition = document.querySelector('.conditiontext');
-    const humidity = document.querySelector('.humidity');
-    const icon = document.querySelector('.icon');
-    const wind = document.querySelector('.wind');
-    const visibility = document.querySelector('.visibility');
-
     cityh2.textContent = data.address;
     //maybe change the date to a more readable format
     date.textContent = data.days[0].datetime;
     //the api does not provide country data, left blank for now
     //country.textContent = data.country;
 
-    
+//update dom elements with weather data
     sunrise.textContent = data.days[0].sunrise;
     sunset.textContent = data.days[0].sunset;
     temp.textContent = `${data.days[0].temp}°`;
-    feelslike.textContent = `Feels like: ${data.days[0].feelslike}°C`;
+    feelslike.textContent = `Feels like: ${data.days[0].feelslike}°`;
     condition.textContent = data.days[0].conditions;
     humidity.textContent = `Humidity: ${data.days[0].humidity}%`;
     wind.textContent = `Wind: ${data.days[0].windspeed} km/h`;
@@ -80,34 +83,24 @@ function updateWeather(data) {
         "thunder": thundericon,
         "wind": windIcon,
         "cloudy": cloudyDayIcon
-        ,"clear-night": clearnightIcon
-        ,"partly-cloudy-night": partlyCloudyNightIcon
-      };
+        , "clear-night": clearnightIcon
+        , "partly-cloudy-night": partlyCloudyNightIcon
+    };
 
     //function to set the icon based on the icon string from the api
     function getIcon(element) {
-          const iconKey = data.days[0].icon;      
-          element.src = iconMap[iconKey]
+        const iconKey = data.days[0].icon;
+        element.src = iconMap[iconKey]
     }
     getIcon(icon);
-    //filter the hourly data to get only the next 6 hours
-    function filterHourlyData(hourlyData) {
-        // Get the current hour
-        const currentTime = new Date();
-        const currentHour = currentTime.getHours();
 
-        
-        return hourlyData.filter(hour => {
-            const hourTime = parseInt(hour.datetime.split(':')[0]); // Extract hour from API data
-            return hourTime >= currentHour && hourTime < currentHour + 6;
-        });
-    }
+//update hourly forecast
     function updateHourly(data) {
         const hoursContainer = document.querySelector('.middlehours');
         hoursContainer.innerHTML = '';
 
+        //filter the hourly data to get only the next 6 hours
         const hourData = filterHourlyData(data.days[0].hours);
-        console.log(hourData);
 
         hourData.forEach(hour => {
             const hourDiv = document.createElement('div');
@@ -121,10 +114,11 @@ function updateWeather(data) {
             const iconImg = document.createElement('img');
             iconImg.classList.add('houricon');
             hourDiv.appendChild(iconImg);
+            //set the icon for each hour
             function gethourIcon(element) {
-          const houriconKey = hour.icon
-          element.src = iconMap[houriconKey]  
-    }
+                const houriconKey = hour.icon
+                element.src = iconMap[houriconKey]
+            }
             gethourIcon(iconImg);
             const conditionP = document.createElement('p');
             conditionP.classList.add('conditionp');
@@ -139,8 +133,56 @@ function updateWeather(data) {
             windP.textContent = `Wind: ${hour.windspeed} km/h`;
             hourDiv.appendChild(windP);
 
-            
+
         });
     }
     updateHourly(data);
 }
+
+//filter the hourly data to get only the next 6 hours
+function filterHourlyData(hourlyData) {
+    // Get the current hour
+    const currentTime = new Date();
+    const currentHour = currentTime.getHours();
+
+
+    return hourlyData.filter(hour => {
+        const hourTime = parseInt(hour.datetime.split(':')[0]); // Extract hour from API data
+        return hourTime >= currentHour && hourTime < currentHour + 6;
+    });
+}
+
+//convert from fahrenheit to celsius
+function toCelsius(fahrenheit) {
+    return ((fahrenheit - 32) * 5 / 9).toFixed(1);
+}
+
+
+//event listener for the unit button to toggle between celsius and fahrenheit
+unitbtn.addEventListener('click', () => {
+    if (unitbtn.textContent === 'C°') {
+        unitbtn.textContent = 'F°';
+        temp.textContent = `${toCelsius(weatherdata.days[0].temp)}°`;
+        feelslike.textContent = `Feels like: ${toCelsius(weatherdata.days[0].feelslike)}°`;
+        //update hourly temps
+        const hourTemps = document.querySelectorAll('.temphour');
+
+        const hourData = filterHourlyData(weatherdata.days[0].hours);
+        hourTemps.forEach((tempP) => {
+            tempP.textContent = `${toCelsius(hourData.shift().temp)}°`;
+        });
+
+    } else if (unitbtn.textContent === 'F°') {
+        unitbtn.textContent = 'C°';
+        temp.textContent = `${weatherdata.days[0].temp}°`;
+        feelslike.textContent = `Feels like: ${weatherdata.days[0].feelslike}°`;
+        //update hourly temps
+        const hourTemps = document.querySelectorAll('.temphour');
+        const hourData = filterHourlyData(weatherdata.days[0].hours);
+        hourTemps.forEach((tempP) => {
+            tempP.textContent = `${hourData.shift().temp}°`;
+        });
+        
+    }
+
+});
