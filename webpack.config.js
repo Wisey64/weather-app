@@ -1,11 +1,12 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development', 
+  mode: 'development',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/repo-name/', // Base path for assets
   },
   module: {
     rules: [
@@ -13,11 +14,11 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader', 
+          loader: 'babel-loader',
         },
       },
       {
-        test: /\.css$/, 
+        test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
       {
