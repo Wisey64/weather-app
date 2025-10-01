@@ -89,11 +89,11 @@ function updateWeather(data) {
     };
 
     //function to set the icon based on the icon string from the api
-    function getIcon(element) {
-        const iconKey = data.days[0].icon;
+    function getIcon(element, data) {
+        const iconKey = data.icon;
         element.src = iconMap[iconKey]
     }
-    getIcon(icon);
+    getIcon(icon,data.days[0]);
 
 //update hourly forecast
     function updateHourly(data) {
@@ -116,11 +116,7 @@ function updateWeather(data) {
             iconImg.classList.add('houricon');
             hourDiv.appendChild(iconImg);
             //set the icon for each hour
-            function gethourIcon(element) {
-                const houriconKey = hour.icon
-                element.src = iconMap[houriconKey]
-            }
-            gethourIcon(iconImg);
+            getIcon(iconImg,hour);
             const conditionP = document.createElement('p');
             conditionP.classList.add('conditionp');
             conditionP.textContent = hour.conditions;
@@ -162,6 +158,7 @@ function updateWeather(data) {
         const iconImg = document.createElement('img');
         iconImg.classList.add('dayicon');
         iconpdiv.appendChild(iconImg);
+        getIcon(iconImg,day);
         const conditionP = document.createElement('p');
         conditionP.classList.add('conditionday');
         conditionP.textContent = day.conditions;
@@ -226,6 +223,12 @@ unitbtn.addEventListener('click', () => {
         hourTemps.forEach((tempP) => {
             tempP.textContent = `${toCelsius(hourData.shift().temp)}°`;
         });
+        //update next days temps
+        const dayTemps = document.querySelectorAll('.tempday');
+        const daysData = weatherdata.days.slice(1, 4); // Get the next 3 days
+        dayTemps.forEach((tempP) => {
+            tempP.textContent = `${toCelsius(daysData.shift().temp)}°`;
+        });
 
     } else if (unitbtn.textContent === 'F°') {
         unitbtn.textContent = 'C°';
@@ -236,6 +239,12 @@ unitbtn.addEventListener('click', () => {
         const hourData = filterHourlyData(weatherdata.days[0].hours);
         hourTemps.forEach((tempP) => {
             tempP.textContent = `${hourData.shift().temp}°`;
+        });
+        //update next days temps
+        const dayTemps = document.querySelectorAll('.tempday');
+        const daysData = weatherdata.days.slice(1, 4); // Get the next 3 days
+        dayTemps.forEach((tempP) => {
+            tempP.textContent = `${daysData.shift().temp}°`;
         });
         
     }
