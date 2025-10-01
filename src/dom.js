@@ -59,8 +59,9 @@ function updateWeather(data) {
     //country.textContent = data.country;
 
 //update dom elements with weather data
-    sunrise.textContent = data.days[0].sunrise;
-    sunset.textContent = data.days[0].sunset;
+
+    sunrise.textContent = use12hourFormat(data.days[0].sunrise)
+    sunset.textContent = use12hourFormat(data.days[0].sunset);
     temp.textContent = `${data.days[0].temp}°`;
     feelslike.textContent = `Feels like: ${data.days[0].feelslike}°`;
     condition.textContent = data.days[0].conditions;
@@ -109,7 +110,7 @@ function updateWeather(data) {
 
             const timeP = document.createElement('p');
             timeP.classList.add('timep');
-            timeP.textContent = hour.datetime;
+            timeP.textContent = use12hourFormat(hour.datetime);
             hourDiv.appendChild(timeP);
             const iconImg = document.createElement('img');
             iconImg.classList.add('houricon');
@@ -137,6 +138,60 @@ function updateWeather(data) {
         });
     }
     updateHourly(data);
+    //update next days forecast
+    function updatedays(data) {
+    const daysContainer = document.querySelector('.daycontainer');
+    daysContainer.innerHTML = '';
+    const daysData = data.days.slice(1, 4); // Get the next 3 days
+
+    daysData.forEach(day => {
+        const dayDiv = document.createElement('div');
+        dayDiv.classList.add('daycard');
+        daysContainer.appendChild(dayDiv);
+        const dateP = document.createElement('p');
+        dateP.classList.add('datep');
+        dateP.textContent = day.datetime;
+        dayDiv.appendChild(dateP);
+        const tempP = document.createElement('p');
+        tempP.classList.add('tempday');
+        tempP.textContent = `${day.temp}°`;
+        dayDiv.appendChild(tempP);
+        const iconpdiv = document.createElement('div');
+        iconpdiv.classList.add('iconpdiv');
+        dayDiv.appendChild(iconpdiv);
+        const iconImg = document.createElement('img');
+        iconImg.classList.add('dayicon');
+        iconpdiv.appendChild(iconImg);
+        const conditionP = document.createElement('p');
+        conditionP.classList.add('conditionday');
+        conditionP.textContent = day.conditions;
+        iconpdiv.appendChild(conditionP);
+        
+});
+}
+    updatedays(data);
+}
+function use12hourFormat(timeString) {
+    // Split into parts: ["HH", "MM", "SS"]
+    const parts = timeString.split(":");
+    let hour = parseInt(parts[0], 10);
+    const minutes = parts[1];
+    const seconds = parts[2];
+
+    let suffix = "AM";
+    if (hour === 0) {
+        hour = 12; // midnight
+    } else if (hour === 12) {
+        suffix = "PM"; // noon
+    } else if (hour > 12) {
+        hour = hour - 12;
+        suffix = "PM";
+    }
+
+    
+    const formattedHour = String(hour).padStart(2, "0");
+
+    return `${formattedHour}:${minutes}:${seconds} ${suffix}`;
 }
 
 //filter the hourly data to get only the next 6 hours
@@ -186,3 +241,4 @@ unitbtn.addEventListener('click', () => {
     }
 
 });
+

@@ -192,6 +192,11 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  
+}
+.timep{
+  text-wrap: nowrap;
 }
 .sunriseiconsvg, .sunseticonsvg{
   width: 40px;
@@ -223,3 +228,29 @@ h1{
   width: 40px;
   height: 40px;
 }
+.daycontainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 85%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 50px;
+  
+  
+}
+.daycard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #005586;
+  padding: 20px;
+  border-radius: 20px;
+  
+  
+  text-align: center;
+  justify-content: center;
+}
+
+
