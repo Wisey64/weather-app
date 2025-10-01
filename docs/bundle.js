@@ -409,7 +409,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/repo-name/";
+/******/ 		__webpack_require__.p = "/weather-app/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
