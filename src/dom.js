@@ -24,7 +24,6 @@ const cityInput = document.getElementById('city-input');
 const searchBtn = document.getElementById('search-btn');
 const cityh2 = document.querySelector('.city');
 const date = document.querySelector('.datep');
-const country = document.querySelector('.country');
 const sunrise = document.querySelector('.sunrise');
 const sunset = document.querySelector('.sunset');
 const temp = document.querySelector('.tempnum');
@@ -35,10 +34,14 @@ const icon = document.querySelector('.icon');
 const wind = document.querySelector('.wind');
 const visibility = document.querySelector('.visibility');
 const unitbtn = document.querySelector('.unit');
-
+const weathercontainer = document.querySelector('.weathercontainer');
+document.body.classList.add('initial');
 let weatherdata;
 //event listener for the search button to fetch weather data and update the DOM
 searchBtn.addEventListener("click", () => {
+    //show the weather container and hide the initial state
+    document.body.classList.remove('initial');
+    weathercontainer.style.display = 'block';
     const userinput = cityInput.value;
     fetchWeather(userinput)
         .then(data => {
@@ -53,10 +56,9 @@ searchBtn.addEventListener("click", () => {
 //function to update the DOM with fetched weather data
 function updateWeather(data) {
     cityh2.textContent = data.address;
-    //maybe change the date to a more readable format
+    
     date.textContent = data.days[0].datetime;
-    //the api does not provide country data, left blank for now
-    //country.textContent = data.country;
+    
 
 //update dom elements with weather data
 
